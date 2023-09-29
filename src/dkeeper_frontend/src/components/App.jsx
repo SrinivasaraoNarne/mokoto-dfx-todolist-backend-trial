@@ -10,6 +10,7 @@ function App() {
 
   function addNote(newNote) {
     setNotes(prevNotes => {
+      dkeeper_backend.createNote(newNote.title, newNote.content)
       return [...prevNotes, newNote];
     });
   }
